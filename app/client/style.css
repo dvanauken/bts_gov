@@ -1,0 +1,162 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+  height: 100vh;
+}
+
+/* Main container */
+.explorer-container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Folder tree styles */
+.folder-tree {
+  width: 280px;
+  background: #f8f9fa;
+  border-right: 1px solid #dee2e6;
+  overflow-y: auto;
+  flex-shrink: 0;
+}
+
+.tree-header {
+  padding: 12px 16px;
+  font-weight: 500;
+  border-bottom: 1px solid #dee2e6;
+  background: #f1f3f5;
+}
+
+/* Folder and file styles */
+.tree-item {
+  cursor: pointer;
+  user-select: none;
+}
+
+.tree-content {
+  display: flex;
+  align-items: center;
+  padding: 6px 8px;
+  gap: 4px;
+}
+
+.tree-content:hover {
+  background: #e9ecef;
+}
+
+.tree-icon {
+  width: 16px;
+  text-align: center;
+}
+
+.tree-children {
+  padding-left: 20px;
+  display: none;
+}
+
+.tree-item.expanded > .tree-children {
+  display: block;
+}
+
+/* Content area styles */
+.content-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+#content-display {
+  flex: 1;
+  overflow: auto;
+  padding: 20px;
+  white-space: pre-wrap;
+  font-family: monospace;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.welcome-message {
+  color: #6c757d;
+  text-align: center;
+  padding: 40px;
+}
+
+/* Progress overlay styles */
+.progress-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.9);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+}
+
+.progress-container {
+  width: 100%;
+  max-width: 400px;
+  background: #dee2e6;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  width: 0%;
+  height: 8px;
+  background: #228be6;
+  transition: width 0.2s ease;
+}
+
+.progress-text {
+  font-size: 14px;
+  color: #495057;
+}
+
+/* Pagination styles */
+.pagination {
+  display: flex;
+  gap: 8px;
+  padding: 12px;
+  background: #f8f9fa;
+  border-top: 1px solid #dee2e6;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pagination button {
+  padding: 6px 12px;
+  border: 1px solid #ced4da;
+  background: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pagination button:hover:not(:disabled) {
+  background: #e9ecef;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination-info {
+  color: #6c757d;
+  font-size: 13px;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="explorer-container">
+        <aside class="folder-tree">
+            <div class="tree-header">File Explorer</div>
+            <div id="folder-root"></div>
+        </aside>
+        <main class="content-area">
+            <div id="content-display">
+                <div class="welcome-message">Select a file to view its contents</div>
+            </div>
+            <div id="progress-overlay" class="progress-overlay">
+                <div class="progress-container">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div class="progress-text" id="progress-text">Loading...</div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
