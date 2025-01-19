@@ -40,3 +40,5 @@ ENV/
 .DS_Store
 
 result.*.txt
+
+app/server/flights.db

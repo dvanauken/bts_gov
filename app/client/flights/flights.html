@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flights Data</title>
+    <link rel="stylesheet" href="flights.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Flights Data</h1>
+        
+        <div id="progress-overlay" class="progress-overlay">
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            <div class="progress-text" id="progress-text">Loading...</div>
+        </div>
+        
+        <table id="flights-table">
+            <thead>
+                <tr>
+                    <th>Year</th>
+                    <th>Quarter</th>
+                    <th>ItinID</th>
+                    <th>SeqNum</th>
+                    <th>Coupons</th>
+                    <th>Origin</th>
+                    <th>Destination</th>
+                    <th>Coupon Type</th>
+                    <th>Carrier</th>
+                    <th>Operator</th>
+                    <th>RP Carrier</th>
+                    <th>Passengers</th>
+                </tr>
+            </thead>
+            <tbody id="flights-data">
+            </tbody>
+        </table>
+    </div>
+    <script src="flights.js"></script>
+</body>
+</html>

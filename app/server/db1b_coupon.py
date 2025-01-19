@@ -72,9 +72,17 @@ class DB1BCouponDownloader:
                 
                 try:
                     # Read CSV columns we want
-                    columns = ['ItinID', 'MktID', 'SeqNum', 'Coupons', 'Origin', 
-                             'Dest', 'CouponType', 'TkCarrier', 'OpCarrier', 
-                             'RPCarrier', 'Passengers']
+                    columns = ['ItinID', 
+                               'MktID', 
+                               'SeqNum', 
+                               'Coupons', 
+                               'Origin', 
+                               'Dest', 
+                               'CouponType', 
+                               'TkCarrier', 
+                               'OpCarrier', 
+                               'RPCarrier', 
+                               'Passengers']
                     
                     print("Reading CSV...")
                     chunk_size = 500000  # Process 500k rows at a time

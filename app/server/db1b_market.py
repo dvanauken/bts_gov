@@ -6,7 +6,7 @@ from datetime import datetime
 from tqdm import tqdm
 import urllib3
 import os
-from .config_reader import ConfigReader  # New
+from config_reader import ConfigReader
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # Disable SSL warnings
